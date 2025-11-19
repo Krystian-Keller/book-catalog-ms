@@ -71,12 +71,13 @@ def update_book(
     return BookDTO(**updated)
 
 
-@router.delete("/books/{isbn}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_book(isbn: str, service: CatalogService = Depends(get_service)) -> None:
+@router.delete("/books/{isbn}", status_code=status.HTTP_200_OK)
+def delete_book(isbn: str, service: CatalogService = Depends(get_service)) -> dict:
     """Remove a book."""
 
     try:
         service.remove_book(isbn)
+        return {"status": "deleted"}
     except KeyError as exc:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(exc)) from exc
 
