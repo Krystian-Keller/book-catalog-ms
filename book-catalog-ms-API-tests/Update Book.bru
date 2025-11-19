@@ -1,0 +1,30 @@
+meta {
+  name: Update Book
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://127.0.0.1:8000/catalog/books/:isbn
+  body: json
+  auth: inherit
+}
+
+params:path {
+  isbn: 1351651603210
+}
+
+body:json {
+    {
+      "title": "Exemplo de título 77",
+      "author": "Fulano de tal",
+      "isbn": "13516516032107",
+      "publisher": "XYZ editfora",
+      "pages": 985
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Add Book
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8000/catalog/books
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Exemplo de título 28",
+    "author": "Fulano de tal",
+    "isbn": "135165160321029",
+    "publisher": "XYZ editora",
+    "pages": 985
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Export Catalog (XML)
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://127.0.0.1:8000/catalog/export
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "format": "xml"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

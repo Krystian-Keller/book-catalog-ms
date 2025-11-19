@@ -1,0 +1,20 @@
+meta {
+  name: Get Book by ISBN
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://127.0.0.1:8000/catalog/books/:isbn
+  body: none
+  auth: inherit
+}
+
+params:path {
+  isbn: 13516516032106
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

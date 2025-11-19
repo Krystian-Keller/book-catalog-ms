@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "book-catalog-API-tests",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
