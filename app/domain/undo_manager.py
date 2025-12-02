@@ -1,5 +1,3 @@
-"""Undo manager implementing the Memento pattern with a bounded history."""
-
 from __future__ import annotations
 
 from collections import deque

@@ -11,10 +11,35 @@ post {
 }
 
 body:json {
+  // {
+  //   "format": "json",
+  //   "content": "{\"catalog\": [{\"title\": \"Imported A\", \"author\": \"Anon\", \"isbn\": \"5555555555555\", \"publisher\": \"Global\", \"pages\": 100}, {\"title\": \"Imported B\", \"author\": \"Anon\", \"isbn\": \"6666666666666\", \"publisher\": \"Global\", \"pages\": 200}]}"
+  // }
+  
+  // {
+  //   "format": "json",
+  //   "content": "{\"catalog\": [{\"title\": \"Imported A\", \"author\": \"Anon\", \"isbn\": \"5555555555555\", \"publisher\": \"Global\", \"pages\": 100 },{\"title\": \"Imported B\", \"author\": \"Anon\", \"isbn\": \"6666666666666\", \"publisher\": \"Global\", \"pages\": 200 }]}"
+  // }
+  
+  // {
+  //   "format": "xml",
+  //   "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><catalog><book><title>XML Imported</title><author>XML Author</author><isbn>1231231231231</isbn><publisher>XML Pub</publisher><pages>321</pages></book></catalog>"
+  // }
   {
     "format": "json",
-    "content": "{\"catalog\": [{ \"title\": \"Exemplo de título\", \"author\": \"Fulano de tal\", \"isbn\": \"13516516032106\", \"publisher\": \"XYZ editora 2\", \"pages\": 985 }]}"
+    "content": "{\"catalog\": [{\"title\": \"Imported A\", \"author\": \"Anon\", \"isbn\": \"5555555555555\", \"publisher\": \"Global\", \"pages\": 100 },{\"title\": \"Imported B\", \"author\": \"Anon\", \"isbn\": \"6666666666666\", \"publisher\": \"Global\", \"pages\": 200 }]}"
   }
+  
+  // {
+  //   "format": "json",
+  //   "content": "{\"catalog\": [{\"title\": \"Imported A\", \"author\": \"Anon\", \"isbn\": \"5555555555555\", \"publisher\": \"Global\", \"pages\": 100 },{\"title\": \"Imported B\", \"author\": \"Anon\", \"isbn\": \"6666666666666\", \"publisher\": \"Global\", \"pages\": 200 }]}"
+  // }
+  
+  
+  // {
+  //   "format": "xml",
+  //   "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><catalog><book><title>XML Imported</title><author>XML Author</author><isbn>1231231231231</isbn><publisher>XML Pub</publisher><pages>321</pages></book></catalog>"
+  // }
   
 }
 
