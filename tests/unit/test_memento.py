@@ -58,3 +58,29 @@ def test_remaining_reports_available_states() -> None:
 
     undo.undo(catalog)
     assert undo.remaining() == 1
+
+
+def test_history_limit_default_cap() -> None:
+    catalog = make_catalog()
+    undo = UndoManager()
+
+    for idx in range(12):
+        undo.record_state(catalog.create_memento())
+        catalog.update_book(
+            "AAA",
+            Book(title=f"Title {idx}", author="Author", isbn="AAA", publisher="Press", pages=100 + idx),
+        )
+
+    assert undo.remaining() == 10
+
+
+def test_undo_without_history_raises_error() -> None:
+    catalog = make_catalog()
+    undo = UndoManager(limit=2)
+
+    with pytest.raises(ValueError):
+        undo.undo(catalog)
+
+    undo.record_state(catalog.create_memento())
+    undo.undo(catalog)
+    assert undo.remaining() == 0
